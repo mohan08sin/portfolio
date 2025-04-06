@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/SVGPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/TextPlugin.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" 
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+    <title>Mohan</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo"> <!-- data-aos="zoom-in" data-aos-duration="1500" -->
+                Mohan  <span>Singh</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="profile.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#ABOUT">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#skills-page">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#">Services</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#">Contact</a></div>
+                <div class="bld">
+                    <div class="btn__indicator">
+                        <div class="btn__icon-container">
+                            <i class="btn__icon fa-solid"></i>
+                        </div>
+                    </div>
+                </div>
+                
+               
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="profile.html">Home</a>
+                <a href="#ABOUT">About</a>
+                <a href="#skills-page">Skills</a>
+                <a href="#">Service</a>
+                <a href="#">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+
+    <section id="HOME" class="boxxx">
+        <div class="main-container">
+
+            <svg class="svg-animation image">
+                <defs>
+                    <pattern id="imagePattern" patternUnits="userSpaceOnUse" width="100" height="100">
+                        <image class="img" href="pic/imgg.jpeg" x="-6" y="0" width="115" height="115" />
+                    </pattern>
+                </defs>
+                <circle cx="50" cy="50" r="50" stroke="#0a7b33" stroke-width="3" fill="url(#imagePattern)" />
+            </svg>
+
+
+
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Mohan</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm a <span class="typewriter-text"></span></div>
+                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1100">
+                    Passionate full stack developer with hands-on experience in creating user-focused web applications using clean,
+                    efficient code
+                </p>
+                <div class="social-links">
+                    <a href="https://github.com/mohan08sin" target="_blank" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300" ><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/krishan-mohan-singh" target="_blank" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/mohan08sin" target="_blank "data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://t.me/mohan08sin" target="_blank" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+                <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
+                    <a href="https://wa.me/7340868589?text=Hello%20!" target="_blank"><button>Let's Talk!</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ABOUT" class="boxxx">
+        <div class="about">
+            <h1 id="aaa">About</h1>
+            <div class="typewriter2" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
+                <span class="typewriter-txt2"></span>
+            </div>
+        </div>
+        <div class="box">
+            <div class="card">
+                <p>As a Full Stack Developer, I design and implement dynamic web applications, both frontend and backend technologies. Passionate about creating seamless, high-performance solutions that drive business success.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="skills-page" class="skills-container boxxx">
+        <div class="skilltyper">
+            <div id="skill">Skills</div>
+            <div class="typewriter3" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
+                What I Can Do? <span class="typewriter-text4"></span>
+            </div>
+        </div>
+
+        <div class="skill-boxes">
+            <div class="skills-wrapper" id="skillsWrapper">
+                <div class="skill-box">
+                    <img src="pic/htmll.png" alt="HTML Icon">
+                    <span>HTML</span>
+                    
+                </div>
+                <div class="skill-box">
+                    <img src="pic/csss.png" alt="CSS Icon">
+                    <span>CSS</span>
+                </div>
+                <div class="skill-box">
+                    <img src="pic/javascript.png" alt="JavaScript Icon">
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-box">
+                    <img src="pic/java.png" alt="Java Icon">
+                    <span>Java</span>
+                </div>
+                <div class="skill-box">
+                    <img src="pic/python.png" alt="Python Icon">
+                    <span>Python</span>
+                </div>
+                <div class="skill-box">
+                    <img src="pic/mysql.png" alt="MySQL Icon">
+                    <span>MySQL</span>
+                </div>
+                <div class="skill-box">
+                    <img src="pic/springBoot.png" alt="SpringBoot Icon">
+                    <span>Spring Boot</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+      AOS.init({offset:0});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" 
+        integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer">
+</script>
+    <script src="script.js"></script>
+</body>
+</html>
