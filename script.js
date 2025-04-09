@@ -161,7 +161,7 @@ gsap.to(".skill-box", {
 });
 
 
-//  Cursor
+
 
 const easeOutSine = (t, b, c, d) => {
     return c * Math.sin((t / d) * (Math.PI / 2)) + b;
