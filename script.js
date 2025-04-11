@@ -412,7 +412,7 @@ const easeOutSine = (t, b, c, d) => {
     }
   
     // Add hover event listeners
-    div.addEventListener('mouseenter', () => {
+    div.addEventListener('dblclick', () => {
       adjustParagraphPosition();
       paragraph.style.display = 'block';
     });
