@@ -395,7 +395,7 @@ projectBoxes.className = 'project-boxes';
 
 const projects = [
   {
-    imgSrc: 'pic/1stpage.jPG',
+    imgSrc: 'pic/1stpage.JPG',
     title: 'Portfolio',
     description: 'A modern, responsive portfolio built with HTML, CSS, JavaScript, and GSAP for smooth animations and transitions. It showcases my skills, projects, and experience in a visually appealing way.'
   },{
