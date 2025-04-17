@@ -465,7 +465,78 @@ nav {
     margin-top: 10px;
 }
 
+/* Project */
 
+.projects-container {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .projects-container h1 {
+    text-align: center;
+    margin-top: 10vh;
+    font-size: 3rem;
+  }
+
+  .project-boxes {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    height: 100%;
+    width: max-content;
+    padding: 0 10vw;
+  }
+
+  .project-box {
+    width: 40vw;
+    height: 70%;
+    margin-top: 10vh;
+    overflow: auto;
+    background-color: transparent;
+    border-radius: 15px;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+
+    animation: Border 3s infinite linear;
+    border: 10px solid transparent;
+    border-image-slice: 1;
+
+    -webkit-mask-image: radial-gradient(white, black);
+    mask-image: radial-gradient(white, black);
+    -webkit-mask-composite: destination-in;
+    mask-composite: intersect;
+  }
+
+  .project-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .project-box h2 {
+    font-size: 2em;
+    margin: 15px 20px 10px;
+  }
+
+  .project-box p {
+    font-size: 1em;
+    padding: 0 20px 20px;
+    line-height: 1.5;
+  }
+
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -9;
+  }
 
 
 /* ------------------------------------------------------------------------------------------------------------------------------------- */
@@ -510,104 +581,6 @@ nav {
     }
 }
 
-@media (max-width: 440px) {
-
-    nav .logo {
-        position: absolute;
-        top: 16px;
-        left: 15px;
-        font-size: 1.5rem;
-        margin-top: 23%;
-    }
-
-    .main-container .image {
-        width: 50%;
-        height: 25%;
-        margin-bottom: 0px;
-        z-index: -2;
-    }
-
-    .main-container .content {
-        width: 80%;
-    }
-
-    .main-container button {
-        margin-top: 15px;
-    }
-
-    .svg-animation {
-        width: 80px;
-        height: 80px;
-        z-index: -2;
-    }
-
-    .svg-animation .img {
-        object-fit: cover;
-        
-    }
-
-    .svg-animation circle {
-        stroke-width: 2;
-    }
-
-    .main-container .image {
-        width: 100px;
-        height: 100px;
-        margin-bottom: 0px;
-    }
-    .nav-container {
-        width: 100vw;
-        z-index: 3;
-        position: fixed;
-        
-    }
-
-    .social-links i {
-        width: 2.4rem;
-        height: 2.4rem;
-        font-size: 1.5rem;
-    }
-
-    .content button {
-        border-radius: 50px;
-        transition: 0.2s linear;
-    }
-
-    .main-container .content {
-        width: 90%;
-        min-height: 100px;
-        padding: 5%;
-    }
-
-    .box {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .card {
-        background-image: linear-gradient(to bottom left, #27432f2d, #2b774253, #08b43c6e);
-        border-radius: 50px;
-        box-shadow: 0 6px 15px rgb(0, 255, 38);
-        margin-top: 7vh;
-        width: 98vw;
-        text-align: center;
-        transform: scale(0.9) rotateY(0deg);
-        transition: transform 0.5s ease;
-        animation: zoomIn 1s ease;
-    }
-
-    .card:hover {
-        transform: scale(1) rotateY(10deg);
-        
-    }
-
-    .card p {
-        font-size: 16px;
-        line-height: 1.5;
-    }
-}
-
 @keyframes zoomIn {
     from {
         transform: scale(0.1);
@@ -618,17 +591,6 @@ nav {
         opacity: 1;
     }
 }
-
-    canvas {
-        position: fixed;
-        top: 0;
-        left: 0;
-        pointer-events: none;
-        z-index: -9;
-      }
-
-    
-    
 
     
     @keyframes Border {
@@ -648,3 +610,427 @@ nav {
             border-image-source: linear-gradient(360deg, rgb(0, 255, 30), rgba(0, 255, 98, 0));
         }
     }
+
+
+      @media (max-width: 440px) {
+       
+        nav .logo {
+            position: absolute;
+            top: 16px;
+            left: 15px;
+            font-size: 1.5rem;
+            margin-top: 23%;
+        }
+    
+        .main-container .image {
+            width: 50%;
+            height: 25%;
+            margin-bottom: 0px;
+            z-index: -2;
+        }
+    
+        .main-container .content {
+            width: 80%;
+        }
+    
+        .main-container button {
+            margin-top: 15px;
+        }
+    
+        .svg-animation {
+            width: 80px;
+            height: 80px;
+            z-index: -2;
+        }
+    
+        .svg-animation .img {
+            object-fit: cover;
+            
+        }
+    
+        .svg-animation circle {
+            stroke-width: 2;
+        }
+    
+        .main-container .image {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 0px;
+        }
+        .nav-container {
+            width: 100vw;
+            z-index: 3;
+            position: fixed;
+            
+        }
+    
+        .social-links i {
+            width: 2.4rem;
+            height: 2.4rem;
+            font-size: 1.5rem;
+        }
+    
+        .content button {
+            border-radius: 50px;
+            transition: 0.2s linear;
+        }
+    
+        .main-container .content {
+            width: 90%;
+            min-height: 100px;
+            padding: 5%;
+        }
+
+        .hamburg,
+        .cancel {
+          cursor: pointer;
+          font-size: 24px;
+          color: rgb(255, 255, 255);
+          position: absolute;
+          z-index: 4;
+        }
+    
+        .cancel {
+          display: none;
+        }
+    
+        .dropdown {
+          position: absolute;
+          top: 60px;
+          left: 0;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0);
+          transform: translateY(-500px);
+          transition: transform 0.3s ease;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          z-index: 3;
+        }
+    
+        .dropdown .links {
+          display: flex;
+          flex-direction: column;
+        }
+    
+        .dropdown .links a {
+          padding: 15px;
+          text-align: center;
+          color: rgb(255, 255, 255);
+          text-decoration: none;
+          font-size: 18px;
+          border-bottom: 1px solid #eee;
+        }
+    
+        .dropdown .links a:hover {
+          background-color: #ffffff49;
+        }
+
+        .cell {
+          flex-direction: column;
+          text-align: center;
+          padding: 20px;
+          height: auto;
+          gap: 20px;
+        }
+      
+        .info {
+          width: 100%;
+          height: auto;
+        }
+      
+        .info .typewriter2 {
+          font-size: 1.5rem;
+        }
+      
+        .box {
+          width: 100%;
+          height: auto;
+          padding: 20px;
+        }
+      
+        .box p {
+          font-size: 1rem;
+        }
+      
+        #aaa {
+          font-size: 2rem;
+        }
+      
+        .skills-container {
+          padding: 20px 10px;
+          height: auto;
+        }
+      
+        .skilltyper {
+          position: static;
+          width: 100%;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+      
+        #skill {
+          font-size: 2rem;
+        }
+      
+        .typewriter3 {
+          font-size: 1rem;
+        }
+      
+        .skills-wrapper {
+          gap: 15px;
+          height: auto;
+          padding: 10px;
+        }
+      
+        .skill-box {
+          width: 100px;
+          height: 100px;
+          font-size: 0.8rem;
+          padding: 10px;
+        }
+      
+        .skill-box img {
+          width: 40px;
+          height: 40px;
+        }
+      
+        .skill-box span {
+          font-size: 0.8rem;
+        }
+      
+        .projects-container {
+          height: auto;
+          padding-bottom: 50px;
+        }
+      
+        .projects-container h1 {
+          font-size: 2rem;
+          margin: 30px 0;
+        }
+      
+        .project-boxes {
+          flex-direction: column;
+          gap: 20px;
+          padding: 0 20px;
+          width: 100%;
+        }
+      
+        .project-box {
+          width: 100%;
+          height: auto;
+          margin-top: 0;
+        }
+      
+        .project-box img {
+          height: 150px;
+        }
+      
+        .project-box h2 {
+          font-size: 1.2rem;
+        }
+      
+        .project-box p {
+          font-size: 0.9rem;
+        }
+      }
+
+    @media (min-width: 441px) and (max-width: 884px) {
+        nav .logo {
+            position: absolute;
+            top: 16px;
+            left: 20px;
+            font-size: 2rem;
+            margin-top: 10%;
+        }
+
+        .main-container {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 100px;
+        }
+
+        .main-container .image {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+
+        .main-container .content {
+            width: 85%;
+            text-align: center;
+            padding: 5%;
+        }
+
+        .main-container button {
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+
+        .svg-animation {
+            width: 120px;
+            height: 120px;
+            z-index: -2;
+        }
+
+        .svg-animation .img {
+            object-fit: cover;
+        }
+
+        .svg-animation circle {
+            stroke-width: 2;
+        }
+
+        .nav-container {
+            width: 100vw;
+            z-index: 3;
+            position: fixed;
+        }
+
+        .hamburg,
+        .cancel {
+            cursor: pointer;
+            font-size: 28px;
+            color: white;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 4;
+        }
+
+        .cancel {
+            display: none;
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            transform: translateY(-500px);
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 3;
+        }
+
+        .dropdown .links {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dropdown .links a {
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            border-bottom: 1px solid #eee;
+        }
+
+        .dropdown .links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .cell {
+            flex-direction: column;
+            text-align: center;
+            padding: 30px;
+            gap: 25px;
+        }
+
+        .info {
+            width: 100%;
+        }
+
+        .info .typewriter2 {
+            font-size: 1.8rem;
+        }
+
+        .box {
+            width: 100%;
+            padding: 25px;
+        }
+
+        .box p {
+            font-size: 1.1rem;
+        }
+
+        #aaa {
+            font-size: 2.2rem;
+        }
+
+        .skills-container {
+            padding: 30px 15px;
+        }
+
+        .skilltyper {
+            position: static;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        #skill {
+            font-size: 2.2rem;
+        }
+
+        .typewriter3 {
+            font-size: 1.1rem;
+        }
+
+        .skills-wrapper {
+            gap: 20px;
+            padding: 15px;
+        }
+
+        .skill-box {
+            width: 110px;
+            height: 110px;
+            font-size: 0.9rem;
+            padding: 15px;
+        }
+
+        .skill-box img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .skill-box span {
+            font-size: 0.9rem;
+        }
+
+        .projects-container {
+            padding-bottom: 60px;
+        }
+
+        .projects-container h1 {
+            font-size: 2.2rem;
+            margin: 35px 0;
+        }
+
+        .project-boxes {
+            flex-direction: column;
+            gap: 25px;
+            padding: 0 25px;
+        }
+
+        .project-box {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .project-box img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+        }
+
+        .project-box h2 {
+            font-size: 1.3rem;
+        }
+
+        .project-box p {
+            font-size: 1rem;
+        }
+    }
+      
+      
