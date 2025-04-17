@@ -14,7 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/SVGPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/TextPlugin.min.js"></script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" 
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" 
@@ -26,15 +26,15 @@
 <body>
     <nav>
         <div class="nav-container">
-            <div class="logo"> <!-- data-aos="zoom-in" data-aos-duration="1500" -->
+            <div class="logo"> 
                 Mohan  <span>Singh</span>
             </div>
             <div class="links">
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Home</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#ABOUT">About</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#skills-page">Skills</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#">Projects</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#">Contact</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#projects">Projects</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#">Resume</a></div>
                 <div class="bld">
                     <div class="btn__indicator">
                         <div class="btn__icon-container">
@@ -51,7 +51,7 @@
                 <a href="#ABOUT">About</a>
                 <a href="#skills-page">Skills</a>
                 <a href="#">Projects</a>
-                <a href="#">Contact</a>
+                <a href="#">Resume</a>
                 <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
             </div>
         </div>
@@ -71,8 +71,6 @@
                 </defs>
                 <circle cx="50" cy="50" r="50" stroke="#0a7b33" stroke-width="3" fill="url(#imagePattern)" />
             </svg>
-
-
 
 
             <div class="content">
@@ -95,20 +93,34 @@
         </div>
     </section>
 
-    <section id="ABOUT" class="boxxx" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="700">
-        <div class="about">
-            <h1 id="aaa">About</h1>
-            <div class="typewriter2" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
-                <span class="typewriter-txt2"></span>
+    <div class="string">
+        <svg width="1500" height="140" xmlns="http://www.w3.org/2000/svg" class="bezierSvg">
+            <path class="bezierPath" d="M 30 80 Q 95 80 1480 80" stroke-width="4" fill="transparent"></path>
+        </svg>
+    </div>
+
+    
+
+    <section  id="ABOUT" class="boxx">
+        <div class="cell cell1">
+            <div ref={inforef} class="info info1">
+                <h1 id="aaa">About</h1>
+                <div class="typewriter2" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
+                    <span class="typewriter-txt2"></span>
+                </div>
             </div>
-        </div>
-        <div class="box">
-            <div class="card">
-                <p>As a Full Stack Developer, I design and implement dynamic web applications, both frontend and backend technologies. Passionate about creating seamless, high-performance solutions that drive business success.</p>
+
+            <div class="box box1">
+                    <p>As a Full Stack Developer, I design and implement dynamic web applications, both frontend and backend technologies. Passionate about creating seamless, high-performance solutions that drive business success.</p>
             </div>
         </div>
     </section>
 
+    <div class="string">
+        <svg width="1500" height="140" xmlns="http://www.w3.org/2000/svg" class="bezierSvg">
+            <path class="bezierPath" d="M 30 80 Q 95 80 1480 80" stroke-width="4" fill="transparent"></path>
+        </svg>
+    </div>
 
     <section id="skills-page" class="skills-container boxxx" class="boxxx" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="700">
         <div class="skilltyper">
@@ -152,40 +164,20 @@
         </div>
     </section>
 
-    <!-- <section id="projects" class="boxxx">
-        <div class="projects-container">
-            <h1>Projects</h1>
-            <div class="project-boxes">
-                <div class="project-box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
-                    <img src="pic/1.png" alt="Project 1">
-                    <h2>Project 1</h2>
-                    <p>Description of Project 1.</p>
-                </div>
-                <div class="project-box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
-                    <img src="pic/2.png" alt="Project 2">
-                    <h2>Project 2</h2>
-                    <p>Description of Project 2.</p>
-                </div>
-                <div class="project-box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
-                    <img src="pic/3.png" alt="Project 3">
-                    <h2>Project 3</h2>
-                    <p>Description of Project 3.</p>
-                </div>
-            </div>
-        </div> -->
+    <div class="string">
+        <svg width="1500" height="140" xmlns="http://www.w3.org/2000/svg" class="bezierSvg">
+            <path class="bezierPath" d="M 30 80 Q 95 80 1480 80" stroke-width="4" fill="transparent"></path>
+        </svg>
+    </div>
 
-  
+    
+        <canvas id="cursorCanvas"></canvas>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-      AOS.init({offset:0});
-</script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" 
-        integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" 
-        crossorigin="anonymous" 
-        referrerpolicy="no-referrer">
-</script>
-    <script src="script.js"></script>
+        
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>AOS.init({offset:0});</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="script.js"></script>
 </body>
 </html>
+
