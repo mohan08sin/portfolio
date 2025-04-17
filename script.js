@@ -39,15 +39,22 @@ setTimeout(() => {
 });
 
 
-function hamburg(){
-    const navbar = document.querySelector(".dropdown")
-    navbar.style.transform = "translateY(0px)"
-}
 
-function cancel(){
-    const navbar = document.querySelector(".dropdown")
-    navbar.style.transform = "translateY(-500px)"
-}
+const hamburg = document.querySelector('.hamburg');
+const cancel = document.querySelector('.cancel');
+const dropdown = document.querySelector('.dropdown');
+
+hamburg.addEventListener('click', () => {
+  dropdown.style.transform = 'translateY(0)';
+  hamburg.style.display = 'none';
+  cancel.style.display = 'block';
+});
+
+cancel.addEventListener('click', () => {
+  dropdown.style.transform = 'translateY(-500px)';
+  cancel.style.display = 'none';
+  hamburg.style.display = 'block';
+});
 
 var typed = new Typed(".typewriter-text",
     {
@@ -374,11 +381,8 @@ if(body.classList.contains('darkmode')){
 
 // projects
 
-// Create the Projects Section
-// Register GSAP plugin
 gsap.registerPlugin(ScrollTrigger);
 
-// Create Projects Section
 const projectsSection = document.createElement('section');
 projectsSection.id = 'projects';
 projectsSection.className = 'boxxx';
@@ -395,7 +399,7 @@ projectBoxes.className = 'project-boxes';
 
 const projects = [
   {
-    imgSrc: 'pic/1stpage.JPG',
+    imgSrc: 'pic/1stpage.jpg',
     title: 'Portfolio',
     description: 'A modern, responsive portfolio built with HTML, CSS, JavaScript, and GSAP for smooth animations and transitions. It showcases my skills, projects, and experience in a visually appealing way.'
   },{
@@ -438,73 +442,11 @@ document.body.insertBefore(projectsSection, document.getElementById('cursorCanva
 
 const style = document.createElement('style');
 style.textContent = `
-.projects-container {
-        height: 100vh;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-    
-      .projects-container h1 {
-        text-align: center;
-        margin-top: 10vh;
-        font-size: 3rem;
-      }
-    
-      .project-boxes {
-        display: flex;
-        flex-direction: row;
-        gap: 70px;
-        height: 100%;
-        width: max-content;
-        padding: 0 10vw;
-      }
-    
-      .project-box {
-        width: 40vw;
-        height: 70%;
-        margin-top: 10vh;
-        overflow: auto;
-        background-color: transparent;
-        border-radius: 15px;
-        
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        text-align: left;
-        scroll-snap-align: center;
-        scroll-snap-stop: always;
 
-        animation: Border 3s infinite linear;
-        border: 10px solid transparent;
-        border-image-slice: 1;
-    
-        -webkit-mask-image: radial-gradient(white, black);
-        mask-image: radial-gradient(white, black);
-        -webkit-mask-composite: destination-in;
-        mask-composite: intersect;
-      }
-    
-      .project-box img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-      }
-    
-      .project-box h2 {
-        font-size: 2em;
-        margin: 15px 20px 10px;
-      }
-    
-      .project-box p {
-        font-size: 1em;
-        padding: 0 20px 20px;
-        line-height: 1.5;
-      }
-  
 `;
 document.head.appendChild(style);
 
-// GSAP Horizontal Scroll
+
 ScrollTrigger.defaults({ scroller: "body" });
 gsap.to(".project-boxes", {
   x: () => `-${document.querySelector(".project-boxes").scrollWidth - window.innerWidth}px`,
@@ -518,3 +460,18 @@ gsap.to(".project-boxes", {
     anticipatePin: 1,
   }
 });
+
+// if (window.innerWidth > 440) {
+//   gsap.to(".project-boxes", {
+//     x: () => `-${document.querySelector(".project-boxes").scrollWidth - window.innerWidth}px`,
+//     ease: "none",
+//     scrollTrigger: {
+//       trigger: ".projects-container",
+//       start: "top top",
+//       end: () => `+=${document.querySelector(".project-boxes").scrollWidth - window.innerWidth}`,
+//       scrub: true,
+//       pin: true,
+//       anticipatePin: 1,
+//     }
+//   });
+// }
