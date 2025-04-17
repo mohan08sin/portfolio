@@ -613,6 +613,16 @@ nav {
 
 
       @media (max-width: 440px) {
+
+
+  .bezierSvg {
+    width: 100%;     
+  }
+
+  .bezierPath {
+    stroke-width: 2;  
+  }
+
        
         nav .logo {
             position: absolute;
