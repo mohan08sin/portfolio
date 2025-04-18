@@ -122,7 +122,7 @@ gsap.fromTo(".svg-animation circle", {
     strokeDashoffset: 0,
     duration: 5,
     ease: "power1.out",
-    repeat: -1,
+    repeat: 0,
     repeatDelay: 1.15
 });
 
@@ -199,7 +199,7 @@ gsap.from(".cell1 .box", {
 
 //  Cousor
 
-
+/*
 
 if(body.classList.contains('darkmode')){
   const canvas = document.getElementById("cursorCanvas");
@@ -207,12 +207,12 @@ if(body.classList.contains('darkmode')){
 
   let width = canvas.width = window.innerWidth;
   let height = canvas.height = window.innerHeight;
-  // let z = canvas.style.zIndex = -9;
+  
 
   window.addEventListener("resize", () => {
     width = canvas.width = window.innerWidth;
     height = canvas.height = window.innerHeight;
-    // z = canvas.style.zIndex = -9;
+    
   });
 
   let particles = [];
@@ -253,7 +253,7 @@ if(body.classList.contains('darkmode')){
   animate();
 }
 
-
+*/
 
   // INFO
 
