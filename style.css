@@ -349,7 +349,7 @@ nav {
     text-align: center;
     overflow: auto;
     animation: Border 3s infinite linear;
-    border: 10px solid transparent;
+    border: 1px solid transparent;
     border-image-slice: 1;
 
     -webkit-mask-image: radial-gradient(white, black);
@@ -504,7 +504,7 @@ nav {
     scroll-snap-stop: always;
 
     animation: Border 3s infinite linear;
-    border: 10px solid transparent;
+    border: 1px solid transparent;
     border-image-slice: 1;
 
     -webkit-mask-image: radial-gradient(white, black);
