@@ -755,7 +755,14 @@ nav {
           width: 100%;
           height: auto;
           padding: 20px;
-border: 1px solid transparent;
+            animation: Border 3s infinite linear;
+    border: 1px solid transparent;
+    border-image-slice: 1;
+
+    -webkit-mask-image: radial-gradient(white, black);
+    mask-image: radial-gradient(white, black);
+    -webkit-mask-composite: destination-in;
+    mask-composite: intersect;
         }
       
         .box p {
@@ -829,7 +836,18 @@ border: 1px solid transparent;
           width: 100%;
           height: auto;
           margin-top: 0;
-border: 1px solid transparent;
+            
+            scroll-snap-align: center;
+    scroll-snap-stop: always;
+
+    animation: Border 3s infinite linear;
+    border: 1px solid transparent;
+    border-image-slice: 1;
+
+    -webkit-mask-image: radial-gradient(white, black);
+    mask-image: radial-gradient(white, black);
+    -webkit-mask-composite: destination-in;
+    mask-composite: intersect;
         }
       
         .project-box img {
