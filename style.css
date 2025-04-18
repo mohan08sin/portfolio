@@ -755,6 +755,7 @@ nav {
           width: 100%;
           height: auto;
           padding: 20px;
+border: 1px solid transparent;
         }
       
         .box p {
@@ -828,6 +829,7 @@ nav {
           width: 100%;
           height: auto;
           margin-top: 0;
+border: 1px solid transparent;
         }
       
         .project-box img {
