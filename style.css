@@ -382,14 +382,11 @@ nav {
 
 
 .skills-container {
-    width: 100vw;
+    position: relative;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    z-index: -1;
 }
 
 .skilltyper {
@@ -405,8 +402,6 @@ nav {
 #skill {
     font-size: 3.5rem;
     letter-spacing: 2px;
-    text-align: left;
-    animation: zoomIn 1s ease;
 }
 
 .typewriter3 {
@@ -430,11 +425,13 @@ nav {
     height: 50vh;
     padding: 20px 0;
     
+    position: relative;
 }
 
-.skills-wrapper .skill-box:hover {
-    animation: animate 1.5s ease-in-out infinite;
+.skill-box:hover {
+    transform: scale(1.1);
 }
+
 
 .skill-box {
     padding: 20px;
@@ -449,9 +446,10 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* overflow: hidden; */
     cursor: pointer;
-    z-index: 0;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
 }
 
 .skill-box img {
