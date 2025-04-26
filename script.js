@@ -155,18 +155,6 @@ mm.add("(max-width: 440px)", () => {
     });
 });
 
-
-Draggable.create(".skill-box", {
-    type: "x,y",
-    bounds: ".skills-container"
-});
-
-gsap.to(".skill-box", {
-    rotation: 360,
-    duration: 3,
-    ease: "elastic.out(1, 0.3)"
-});
-
 // about 
 gsap.registerPlugin(ScrollTrigger);
 gsap.from(".cell1 .info", {
@@ -194,6 +182,42 @@ gsap.from(".cell1 .box", {
         scrub: true, 
         toggleActions: "play none none none" ,
     }
+});
+
+// 
+
+Draggable.create(".skill-box", {
+  type: "x,y",
+  bounds: ".skills-container"
+});
+
+
+gsap.to(".skill-box", {
+  rotation: 360,
+  duration: 3,
+  ease: "elastic.out(1, 0.3)",
+  repeat: -1,
+});
+
+
+gsap.registerPlugin(Draggable);
+
+const balls = document.querySelectorAll(".skill-box");
+
+Draggable.create(path, {
+  type: "x",
+  bounds: ".skills-container",
+  onDrag: function() {
+    
+      balls.forEach(ball => {
+          gsap.to(ball, {
+              x: this.x,
+              y: this.y,
+              duration: 0.3,
+              ease: "power2.out"
+          });
+      });
+  }
 });
 
 
