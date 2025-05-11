@@ -485,17 +485,17 @@ gsap.to(".project-boxes", {
   }
 });
 
-// if (window.innerWidth > 440) {
-//   gsap.to(".project-boxes", {
-//     x: () => `-${document.querySelector(".project-boxes").scrollWidth - window.innerWidth}px`,
-//     ease: "none",
-//     scrollTrigger: {
-//       trigger: ".projects-container",
-//       start: "top top",
-//       end: () => `+=${document.querySelector(".project-boxes").scrollWidth - window.innerWidth}`,
-//       scrub: true,
-//       pin: true,
-//       anticipatePin: 1,
-//     }
-//   });
-// }
+if (window.innerWidth > 440) {
+  gsap.to(".project-boxes", {
+    x: () => `-${document.querySelector(".project-boxes").scrollWidth - window.innerWidth}px`,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".projects-container",
+      start: "top top",
+      end: () => `+=${document.querySelector(".project-boxes").scrollWidth - window.innerWidth}`,
+      scrub: true,
+      pin: true,
+      anticipatePin: 1,
+    }
+  });
+}
